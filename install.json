@@ -1,0 +1,20 @@
+{
+    "instructions": [
+      {
+        "action": "Deploy",
+        "metadataType": "CustomObject",
+        "metadataNames": ["API_Config__mdt"]
+      },
+      {
+        "action": "Deploy",
+        "metadataType": "CustomMetadata",
+        "metadataNames": ["API_Config.OpenWeather"]
+      },
+      {
+        "action": "Deploy",
+        "metadataType": "ApexClass",
+        "metadataNames": ["OpenWeatherWS", "OpenWeatherWSTest"]
+      }
+    ]
+  }
+  
