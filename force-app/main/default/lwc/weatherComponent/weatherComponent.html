@@ -1,0 +1,67 @@
+<template>
+        <div lwc:if={loading} >
+            <lightning-spinner alternative-text="Loading" size="x-small"></lightning-spinner>
+        </div>
+        <div lwc:else>
+            <template if:true={weatherData}>
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="8" padding="around-small">
+                        <lightning-card variant="Narrow"  title="Weather" icon-name="standard:water">
+                            <div class="slds-grid slds-gutters slds-wrap slds-align_absolute-center">
+                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
+                                    <div class="weather-card temperature">
+                                        <p class="label">Current Temperature</p>
+                                        <p class="value"> {temperature} </p>
+                                    </div>
+                                </div>
+            
+                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
+                                    <div class="weather-card wind-speed">
+                                        <p class="label">Current humidity Wind Speed</p>
+                                        <p class="value"> {humidity} mph </p>
+                                    </div>
+                                </div>
+            
+                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
+                                    <div class="weather-card precipitation">
+                                        <p class="label">Current Wind Speed</p>
+                                        <p class="value"> {windSpeed} </p>
+                                    </div>
+                                </div>
+            
+                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
+                                    <div class="weather-card precipitation">
+                                        <p class="label">Weather Description</p>
+                                        <p class="value"> {weatherDescription} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-card>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-card title={location} icon-name="standard:map_line_item">
+                            <div class="slds-p-around_x-small">
+                                <div class="slds-p-around_x-small">
+                                    <lightning-badge label={sunriseTime} icon-name="standard:event"></lightning-badge>
+                                    <lightning-badge label={sunsetTime} icon-name="standard:event"></lightning-badge>
+                                </div>
+                                
+                                <lightning-map 
+                                    map-markers={mapMarkers} 
+                                    zoom-level="15" 
+                                    list-view="hidden" style="height: 100px;">
+                                </lightning-map>
+                            </div>
+                            
+                        </lightning-card>
+                    </lightning-layout-item>
+                </lightning-layout>
+                
+                
+            </template>
+            <template if:true={error}>
+                <p style="color: red;">{error}</p>
+            </template>
+        </div>
+        
+</template>

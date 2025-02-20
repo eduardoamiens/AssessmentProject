@@ -1,0 +1,29 @@
+.weather-card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    height: 82px;
+}
+
+/* Colores personalizados para cada tarjeta */
+.temperature {
+    background-color: #3498db; /* Azul */
+}
+
+.wind-speed {
+    background-color: #7f8c8d; /* Gris */
+}
+
+.precipitation {
+    background-color: #1abc9c; /* Verde */
+}
+
+/* Tamaño del texto */
+.value {
+    font-size: 14px;
+    margin-top: 3px;
+}
