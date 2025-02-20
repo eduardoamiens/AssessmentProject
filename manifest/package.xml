@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<types>
+		<members>API_Config__mdt</members>
+		<members>Customer__c</members>
+		<members>Order_Item__c</members>
+		<members>Order__c</members>
+		<members>ProductExternal__c</members>
+		<name>CustomObject</name>
+	</types>
 	<types>
 		<members>FakeStoreAPIMock</members>
+		<members>OpenWeatherMock</members>
 		<members>OpenWeatherWS</members>
+		<members>OpenWeatherWSTest</members>
 		<members>OrderItemTriggerHandler</members>
 		<members>ProductExternalTriggerHandler</members>
 		<members>ProductSyncBatch</members>
@@ -14,8 +24,6 @@
 		<members>UpdateOrderTotal</members>
 		<members>orderViewController</members>
 		<members>recordDetailController</members>
-		<members>OpenWeatherWSTest</members>
-		<members>OpenWeatherMock</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -74,13 +82,6 @@
 		<name>CustomMetadata</name>
 	</types>
 	<types>
-		<members>Customer__c</members>
-		<members>Order_Item__c</members>
-		<members>Order__c</members>
-		<members>ProductExternal__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
 		<members>Assessment_Project</members>
 		<members>Customer__c</members>
 		<members>Order_Item__c</members>
@@ -108,6 +109,10 @@
 		<members>Order__c-Order Layout</members>
 		<members>ProductExternal__c-Product External Layout</members>
 		<name>Layout</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<types>
 		<members>*</members>
