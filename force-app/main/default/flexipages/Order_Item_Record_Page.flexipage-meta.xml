@@ -65,6 +65,24 @@
                 <identifier>RecordProduct_External_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Item_count__c</fieldItem>
+                <identifier>RecordItem_count__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Sub_total__c</fieldItem>
+                <identifier>RecordSub_total__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Product_price__c</fieldItem>
+                <identifier>RecordProduct_price__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-da2a4f20-bdf5-44b3-ba8f-840320ff2b92</name>
         <type>Facet</type>
     </flexiPageRegions>

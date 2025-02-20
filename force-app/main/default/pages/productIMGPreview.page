@@ -1,0 +1,5 @@
+<apex:page standardController="ProductExternal__c">
+    <apex:outputPanel layout="block">
+        <img src="{!ProductExternal__c.Image__c}" alt="Product Image" style="max-width:150px; max-height:150px;"/>
+    </apex:outputPanel>
+</apex:page>

@@ -78,6 +78,16 @@
                 <identifier>RecordCategory_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Count__c</fieldItem>
+                <identifier>RecordCount_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-b58b5d33-b3fc-496a-b857-2a3b7bdb242c</name>
         <type>Facet</type>
     </flexiPageRegions>

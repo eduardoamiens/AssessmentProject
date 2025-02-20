@@ -67,16 +67,6 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Total_Value__c</fieldItem>
-                <identifier>RecordTotal_Value_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Payment_Status__c</fieldItem>
@@ -91,6 +81,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Payment_Method__c</fieldItem>
                 <identifier>RecordPayment_Method_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Total__c</fieldItem>
+                <identifier>RecordTotal__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-dd0fc649-0a85-415d-96cb-cd414d298cac</name>

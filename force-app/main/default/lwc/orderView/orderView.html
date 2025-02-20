@@ -1,0 +1,44 @@
+<template>
+    <lightning-card variant="Narrow"  title="Orders" icon-name="standard:fulfillment_order">
+        <div class="slds-p-around_x-small">
+            <div class="slds-text-align_right slds-p-bottom_small">
+                <lightning-button label="Add Order" title="Add Order" icon-name="utility:add" class="slds-m-left_x-small" onclick={handleNewOrder}></lightning-button>
+            </div>
+            
+            <lightning-datatable
+                        key-field="id"
+                        data={ordersData}
+                        columns={columns}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column>
+                </lightning-datatable>
+        </div>
+        
+    </lightning-card>
+    <template if:true={isModalOpen}>
+        <section role="dialog" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Cerrar" variant="bare-inverse"
+                        onclick={closeModal}></lightning-button-icon>
+                    <h2 class="slds-text-heading_medium">Nueva Orden</h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-record-form
+                        object-api-name="Order__c"
+                        layout-type="Full"
+                        mode="edit"
+                        onsuccess={handleSuccess}
+                        oncancel={closeModal}>
+                    </lightning-record-form>
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Close" onclick={closeModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

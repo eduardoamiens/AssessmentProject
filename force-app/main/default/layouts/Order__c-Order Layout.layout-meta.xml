@@ -52,6 +52,10 @@
                 <behavior>Edit</behavior>
                 <field>Carrier__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -93,8 +97,8 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>Product_External__c</fields>
-        <fields>Price__c</fields>
-        <fields>Price_changed__c</fields>
+        <fields>Product_price__c</fields>
+        <fields>Sub_total__c</fields>
         <relatedList>Order_Item__c.Order__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
