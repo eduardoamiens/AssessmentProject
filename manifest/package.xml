@@ -27,7 +27,8 @@
 		<name>ApexTrigger</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>Order__c.compactLayout</members>
+		<members>Customer__c.compactLayout</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -70,7 +71,7 @@
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>API_Config__mdt</members>
 		<name>CustomMetadata</name>
 	</types>
 	<types>
@@ -78,6 +79,7 @@
 		<members>Order_Item__c</members>
 		<members>Order__c</members>
 		<members>ProductExternal__c</members>
+		<members>API_Config__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
