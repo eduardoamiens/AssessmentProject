@@ -28,6 +28,7 @@
 		<members>SaveOrderTotal</members>
 		<members>OverdueOrdersScheduler</members>
 		<members>ProductSyncBatchScheduler</members>
+		<members>OverdueOrdersBatch</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
