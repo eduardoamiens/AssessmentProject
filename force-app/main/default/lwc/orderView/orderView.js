@@ -15,6 +15,7 @@ export default class OrderView extends LightningElement {
         { label: 'Status', fieldName: 'Status__c' },
         { label: 'Total Value', fieldName: 'Total__c', type: 'currency' },
         { label: 'Estimated Delivery Date', fieldName: 'Estimated_Delivery_Date__c', type: 'date' },
+        { label: 'Overdue', fieldName: 'Overdue__c', type: 'boolean' },
         {
             type: 'action',
             typeAttributes: {
@@ -49,24 +50,9 @@ export default class OrderView extends LightningElement {
         this.loading = false
     }
 
-    /*async connectedCallback(){
-        this.loading = true
-        const orderData = await getOrders()
-        if(orderData){
-            this.ordersData = orderData.map(order => ({
-                ...order,
-                CustomerName: order.Customer__r ? order.Customer__r.Last_Name__c : 'N/A' 
-            }))
-        }
-        console.log('this.ordersData', this.ordersData)
-        console.log('this.ordersData' + JSON.stringify(this.ordersData))
-        this.loading = false
-    }*/
-
     @wire(MessageContext)
     messageContext
 
-    // Manejo de eventos de acciones en cada fila
     handleRowAction(event) {
         console.log('rowAction')
         const actionName = event.detail.action.name
@@ -85,7 +71,6 @@ export default class OrderView extends LightningElement {
     }
 
     viewDetails(order) {
-        console.log('Ver detalles de:', order)
         const message = {
             messageToSend: order
         }
@@ -94,7 +79,6 @@ export default class OrderView extends LightningElement {
 
     deleteOrder(order) {
         console.log('Eliminar orden:', order)
-        //alert(`Se eliminará la orden: ${order.Name}`)
     }
 
      handleNewOrder() {

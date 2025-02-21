@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
    <masterLabel>assessmentProjectMessageChannel</masterLabel>
-   <isExposed>true</isExposed>
+    <isExposed>true</isExposed>
    <description>This Lightning Message Channel sends information from LWC to LWC</description>
-   <lightningMessageFields>
-       <fieldName>messageToSend</fieldName>
-       <description>message To Send</description>
-   </lightningMessageFields>
+    <lightningMessageFields>
+        <description>message To Send</description>
+        <fieldName>messageToSend</fieldName>
+    </lightningMessageFields>
 </LightningMessageChannel>

@@ -5,40 +5,37 @@
         <div lwc:else>
             <template if:true={weatherData}>
                 <lightning-layout multiple-rows>
-                    <lightning-layout-item size="8" padding="around-small">
+                    <lightning-layout-item size="12" large-device-size="8" medium-device-size="12" small-device-size="12" padding="around-small">
                         <lightning-card variant="Narrow"  title="Weather" icon-name="standard:water">
-                            <div class="slds-grid slds-gutters slds-wrap slds-align_absolute-center">
-                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
-                                    <div class="weather-card temperature">
+                            <lightning-layout multiple-rows>
+                                <lightning-layout-item size="12" large-device-size="3" medium-device-size="6" small-device-size="12" padding="around-small">
+                                    <div class="weather-card temperature slds-wrap slds-align_absolute-center">
                                         <p class="label">Current Temperature</p>
                                         <p class="value"> {temperature} </p>
                                     </div>
-                                </div>
-            
-                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
-                                    <div class="weather-card wind-speed">
+                                </lightning-layout-item>
+                                <lightning-layout-item size="12" large-device-size="3" medium-device-size="6" small-device-size="12" padding="around-small">
+                                    <div class="weather-card wind-speed slds-wrap slds-align_absolute-center">
                                         <p class="label">Current humidity Wind Speed</p>
                                         <p class="value"> {humidity} mph </p>
                                     </div>
-                                </div>
-            
-                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
-                                    <div class="weather-card precipitation">
+                                </lightning-layout-item>
+                                <lightning-layout-item size="12" large-device-size="3" medium-device-size="6" small-device-size="12" padding="around-small">
+                                    <div class="weather-card precipitation slds-wrap slds-align_absolute-center">
                                         <p class="label">Current Wind Speed</p>
                                         <p class="value"> {windSpeed} </p>
                                     </div>
-                                </div>
-            
-                                <div class="slds-col slds-size_3-of-12 slds-p-around_x-small">
-                                    <div class="weather-card precipitation">
+                                </lightning-layout-item>
+                                <lightning-layout-item size="12" large-device-size="3" medium-device-size="6" small-device-size="12" padding="around-small">
+                                    <div class="weather-card precipitation slds-wrap slds-align_absolute-center">
                                         <p class="label">Weather Description</p>
                                         <p class="value"> {weatherDescription} </p>
                                     </div>
-                                </div>
-                            </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
                         </lightning-card>
                     </lightning-layout-item>
-                    <lightning-layout-item size="4" padding="around-small">
+                    <lightning-layout-item size="12" large-device-size="4" medium-device-size="12" small-device-size="12" padding="around-small">
                         <lightning-card title={location} icon-name="standard:map_line_item">
                             <div class="slds-p-around_x-small">
                                 <div class="slds-p-around_x-small">
@@ -49,7 +46,7 @@
                                 <lightning-map 
                                     map-markers={mapMarkers} 
                                     zoom-level="15" 
-                                    list-view="hidden" style="height: 100px;">
+                                    list-view="hidden" style="height: 100px; width: 100%;">
                                 </lightning-map>
                             </div>
                             
