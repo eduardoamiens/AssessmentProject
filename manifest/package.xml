@@ -101,7 +101,6 @@
 	</types>
 	<types>
 		<members>Assessment_Project</members>
-		<members>Customer_Record_Page</members>
 		<members>Order_Item_Record_Page</members>
 		<members>Order_Record_Page</members>
 		<members>Product_External_Record_Page</members>
