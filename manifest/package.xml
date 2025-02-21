@@ -24,6 +24,10 @@
 		<members>UpdateOrderTotal</members>
 		<members>orderViewController</members>
 		<members>recordDetailController</members>
+		<members>OrderItemTriggerTest</members>
+		<members>SaveOrderTotal</members>
+		<members>OverdueOrdersScheduler</members>
+		<members>ProductSyncBatchScheduler</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -52,7 +56,6 @@
 		<members>Order_Item__c.Last_price__c</members>
 		<members>Order_Item__c.Order__c</members>
 		<members>Order_Item__c.Price__c</members>
-		<members>Order_Item__c.Price_changed__c</members>
 		<members>Order_Item__c.Product_External__c</members>
 		<members>Order_Item__c.Product_price__c</members>
 		<members>Order_Item__c.Sub_total__c</members>
@@ -67,6 +70,7 @@
 		<members>Order__c.Total_Value__c</members>
 		<members>Order__c.Total__c</members>
 		<members>Order__c.Tracking_Number__c</members>
+		<members>Order__c.Overdue__c</members>
 		<members>ProductExternal__c.Category__c</members>
 		<members>ProductExternal__c.Count__c</members>
 		<members>ProductExternal__c.Description__c</members>
@@ -103,6 +107,10 @@
 		<name>FlexiPage</name>
 	</types>
 	<types>
+    	<members>*</members>
+		<name>LightningMessageChannel</name>
+	</types>
+	<types>
 		<members>API_Config__mdt-API_Config Layout</members>
 		<members>Customer__c-Customer Layout</members>
 		<members>Order_Item__c-Order Item Layout</members>
@@ -111,7 +119,10 @@
 		<name>Layout</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>customUI</members>
+		<members>orderView</members>
+		<members>recordDetail</members>
+		<members>weatherComponent</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>

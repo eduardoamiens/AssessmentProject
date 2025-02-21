@@ -24,21 +24,27 @@
                 </div>
             </lightning-layout-item>
             <lightning-layout-item size="12" padding="around-small">
-                <div class="slds-text-align_right slds-p-bottom_small">
-                    <lightning-button label="Add Order Item" title="Add Order Item" icon-name="utility:add" class="slds-m-left_x-small" onclick={openModal}></lightning-button>
-                </div>
-            </lightning-layout-item>
-            <lightning-layout-item size="12" padding="around-small">
                 <div class="slds-p-around_x-small">
                     <lightning-card variant="Narrow" title="Order Items" icon-name="standard:work_step">
                         <div class="slds-p-around_x-small">
-                            <lightning-datatable
-                                key-field="id"
-                                data={orderItems}
-                                columns={columns}
-                                onrowaction={handleRowAction}
-                                hide-checkbox-column>
-                        </lightning-datatable>
+                            <lightning-layout multiple-rows>
+                                <lightning-layout-item size="12" padding="around-small">
+                                    <div class="slds-text-align_right slds-p-bottom_small">
+                                        <lightning-button label="Add Order Item" title="Add Order Item" icon-name="utility:add" class="slds-m-left_x-small" onclick={openModal}></lightning-button>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="12" padding="around-small">
+                                    <lightning-datatable
+                                        key-field="id"
+                                        data={orderItems}
+                                        columns={columns}
+                                        onrowaction={handleRowAction}
+                                        hide-checkbox-column>
+                                    </lightning-datatable>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                            
+                        
                         </div>
                     </lightning-card>
                 </div>

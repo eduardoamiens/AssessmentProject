@@ -1,6 +1,5 @@
 import { LightningElement } from 'lwc'
 import getWeatherDetail from'@salesforce/apex/OpenWeatherWS.getWeatherDetail'
-
 export default class WeatherComponent extends LightningElement {
     latitude
     longitude

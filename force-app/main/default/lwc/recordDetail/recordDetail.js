@@ -1,4 +1,5 @@
 import { LightningElement, wire } from 'lwc'
+import { NavigationMixin } from 'lightning/navigation'
 import { publish,subscribe,unsubscribe,createMessageContext,releaseMessageContext, MessageContext } from 'lightning/messageService'
 import assessmentProjectMessageChannel from "@salesforce/messageChannel/assessmentProjectMessageChannel__c"
 import getOrderItems from'@salesforce/apex/recordDetailController.getOrderItems'
@@ -9,7 +10,7 @@ import PRODUCT_EXTERNAL from '@salesforce/schema/Order_Item__c.Product_External_
 import ITEM_COUNT from '@salesforce/schema/Order_Item__c.Item_count__c';
 import ORDER from '@salesforce/schema/Order_Item__c.Order__c';
 
-export default class RecordDetail extends LightningElement {
+export default class RecordDetail extends NavigationMixin(LightningElement) {
 
     ORDER = ORDER
     PRODUCT_EXTERNAL = PRODUCT_EXTERNAL
@@ -36,7 +37,8 @@ export default class RecordDetail extends LightningElement {
         { label: 'Name', fieldName: 'Name' },
         { label: 'Price', fieldName: 'Product_price__c', type: 'currency' },
         { label: 'Item count', fieldName: 'Item_count__c' },
-        { label: 'Price changed', fieldName: 'Price_changed__c' },{
+        { label: 'Sub total', fieldName: 'Sub_total__c', type: 'currency' },
+        {
             type: 'action',
             typeAttributes: {
                 rowActions: [
@@ -114,7 +116,7 @@ export default class RecordDetail extends LightningElement {
         if (event.detail && event.detail.output && event.detail.output.errors) {
             let errors = event.detail.output.errors;
             if (errors.length > 0) {
-                errorMessage = errors[0].message; // Captura el mensaje de validación de Salesforce
+                errorMessage = errors[0].message; 
             }
         }
     
@@ -124,5 +126,31 @@ export default class RecordDetail extends LightningElement {
         this.showToast('Success', 'Order item added successfully', 'success');
         this.closeModal();
         this.loadOrderItems(); 
+    }
+    handleRowAction(event) {
+        
+        const actionName = event.detail.action.name
+        const row = event.detail.row
+        console.log('rowAction ' + JSON.stringify(row))
+        switch (actionName) {
+            case 'view_details':
+                this.viewDetails(row.Id)
+                break
+            case 'delete':
+                this.deleteOrderItem(row.Id)
+                break
+            default:
+                break
+        }
+    }
+    viewDetails(row) {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__recordPage',
+            attributes: {
+                recordId: row, 
+                objectApiName: 'Order_Item__c', 
+                actionName: 'view' 
+            }
+        });
     }
 }

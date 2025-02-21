@@ -137,6 +137,16 @@
                 <identifier>RecordCarrier_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Overdue__c</fieldItem>
+                <identifier>RecordOverdue__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-f10ff1c2-f94a-43db-b831-45e2d246ed5e</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -349,10 +359,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Tabs</value>
-                </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>maintabs</value>

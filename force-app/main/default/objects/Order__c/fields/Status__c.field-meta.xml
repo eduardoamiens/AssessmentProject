@@ -34,6 +34,11 @@
                 <default>false</default>
                 <label>Canceled</label>
             </value>
+            <value>
+                <fullName>Overdue</fullName>
+                <default>false</default>
+                <label>Overdue</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

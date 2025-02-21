@@ -18,8 +18,6 @@ public with sharing class OpenWeatherWS {
         if (response.getStatusCode() == 200) {
             return response.getBody();
         } else {
-            system.debug('Error en body: ' + response.getBody());
-            System.debug('Error en OpenWeatherAPI: ' + response.getStatus());
             return null;
         }
     }  
